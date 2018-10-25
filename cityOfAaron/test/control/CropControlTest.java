@@ -5,6 +5,7 @@
  */
 package control;
 
+import model.CropData;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -12,22 +13,23 @@ import static org.junit.Assert.*;
  *
  * @author gjwsi
  */
-public class feedPeopleTest {
+public class CropControlTest {
     
-    public feedPeopleTest() {
+    public CropControlTest() {
     }
 
     /**
-     * Test of feedPeople method, of class feedPeople.
+     * Test of feedPeople method, of class CropControl.
      */
     @Test
     public void testFeedPeople() {
         System.out.println("feedPeople");
         int wheatInStore = 100;
         int population = 90;
-        cropData cropData = null;
+        CropData cropData = null;
+        CropControl instance = new CropControl();
         int expResult = 10;
-        int result = feedPeople.feedPeople(wheatInStore, population, cropData);
+        int result = instance.feedPeople(wheatInStore, population, cropData);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
